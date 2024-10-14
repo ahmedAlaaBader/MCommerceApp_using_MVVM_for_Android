@@ -45,4 +45,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    //pay pal
+    implementation ("com.paypal.checkout:android-sdk:0.10.1")
+
 }
