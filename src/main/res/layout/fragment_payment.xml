@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/light_gray">
+
+    <!-- Title Section -->
+    <TextView
+        android:id="@+id/tv_payment_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_options"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <!-- CardView for Payment Options -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="6dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="24dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <RadioGroup
+            android:id="@+id/radioGroup_payment_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_paypal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PayPal"
+                android:textSize="16sp"
+                android:buttonTint="@color/purple_700"
+                android:layout_marginBottom="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <RadioButton
+                android:id="@+id/radio_cod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cash On Delivery (COD)"
+                android:textSize="16sp"
+                android:buttonTint="@color/purple_700"
+                android:layout_marginTop="8dp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Continue to Payment Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_continue_to_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue to Payment"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_700"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/ic_payment"
+        app:iconGravity="textStart"
+        app:iconTint="@android:color/white" />
+
+</LinearLayout>
+
+
+

@@ -6,7 +6,9 @@ plugins {
 android {
     namespace = "com.example.mcommerceapp"
     compileSdk = 34
-
+    buildFeatures{
+        viewBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.mcommerceapp"
         minSdk = 24
@@ -42,10 +44,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.legacy.support.v4)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.billing)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     //pay pal
-    implementation ("com.paypal.checkout:android-sdk:0.10.1")
 
+    implementation ("com.paypal.sdk:paypal-android-sdk:2.16.0")
 }

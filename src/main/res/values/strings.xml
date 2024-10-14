@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MCommerceApp</string>
+    <string name="payment_options">Payment Options</string>
 </resources>
